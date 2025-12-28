@@ -5,6 +5,20 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CyberShare.io</title>
+
+    <script>
+      fetch("/servername.txt", { cache: "no-store" })
+        .then(res => res.text())
+        .then(url => {
+          url = url.trim();
+          if (url.startsWith("http")) {
+            localStorage.setItem("CUSTOM_API_URL", url);
+            console.log("✅ Loaded API URL:", url);
+          }
+        })
+        .catch(() => {});
+    </script>
+
     <script type="module" crossorigin src="/assets/index-CO2LDT8b.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-bOmzXsTg.css">
   </head>
