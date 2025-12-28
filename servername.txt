@@ -1,1 +1,1 @@
-http://localhost:8080
+https://pursuit-lesson-ink-queens.trycloudflare.com
